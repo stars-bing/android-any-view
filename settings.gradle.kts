@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidAnyView"
+rootProject.name = "android-any-view"
 include(":app")
 include(":any-view")
