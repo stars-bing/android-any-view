@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidAnyView"
 include(":app")
+include(":any-view")

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundImageView">
+        <!-- 描边宽度-->
+        <attr name="border_width" format="dimension" />
+        <!-- 描边颜色-->
+        <attr name="border_color" format="color" />
+        <!--圆角大小-->
+        <attr name="corner_radius" format="dimension" />
+        <!--左上圆角大小-->
+        <attr name="leftTop_corner_radius" format="dimension" />
+        <!--右上圆角大小-->
+        <attr name="rightTop_corner_radius" format="dimension" />
+        <!--左下圆角大小-->
+        <attr name="leftBottom_corner_radius" format="dimension" />
+        <!--右下圆角大小-->
+        <attr name="rightBottom_corner_radius" format="dimension" />
+        <!--图片类型：圆角或者圆形-->
+        <attr name="type" format="enum">
+            <enum name="oval" value="2" />
+            <enum name="round" value="1" />
+            <enum name="circle" value="0" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ringProgressBar">
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
+        <attr name="progressColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="OutLinedTextView">
+        <attr name="font_stroke" format="dimension"/>
+        <attr name="font_stroke_color" format="color"/>
+    </declare-styleable>
+
+    <!--验证码/密码 输入框-->
+    <declare-styleable name="VerificationCodeInput">
+        <attr name="box" format="integer" />
+        <attr name="child_h_padding" format="dimension" />
+        <attr name="child_v_padding" format="dimension" />
+        <attr name="child_width" format="dimension" />
+        <attr name="child_height" format="dimension" />
+        <attr name="padding" format="dimension" />
+        <attr name="box_bg" format="reference" />
+        <attr name="box_select_bg" format="reference" />
+        <attr name="box_input_ed_bg" format="reference" />
+        <attr name="inputType" format="string" />
+        <attr name="inputTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AutoBoldTextView">
+        <!-- 字体粗细大小 -->
+        <attr name="font_size" format="enum">
+            <enum name="normal" value="1"/>
+            <enum name="middle" value="2"/>
+            <enum name="large" value="3"/>
+            <enum name="bigger" value="4"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

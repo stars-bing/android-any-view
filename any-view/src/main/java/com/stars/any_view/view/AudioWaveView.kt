@@ -1,4 +1,4 @@
-package com.starsxu.androidanyview.view
+package com.stars.any_view.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,7 +7,7 @@ import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
-import com.starsxu.androidanyview.R
+import com.stars.any_view.R
 
 
 /**

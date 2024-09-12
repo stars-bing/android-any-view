@@ -1,4 +1,4 @@
-package com.starsxu.androidanyview.view
+package com.stars.any_view.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -16,7 +16,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
-import com.starsxu.androidanyview.R
+import com.stars.any_view.R
 
 /**
  * Author: Stars

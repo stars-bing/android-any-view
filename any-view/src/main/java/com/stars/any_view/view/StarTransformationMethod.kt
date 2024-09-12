@@ -1,4 +1,4 @@
-package com.starsxu.androidanyview.view
+package com.stars.any_view.view
 
 import android.text.method.PasswordTransformationMethod
 import android.view.View

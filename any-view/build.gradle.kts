@@ -1,21 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.kapt)
 }
 
 android {
-    namespace = "com.starsxu.androidanyview"
+    namespace = "com.stars.any_view"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.starsxu.androidanyview"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 2
-        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -32,7 +29,6 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        //noinspection DataBindingWithoutKapt
         dataBinding = true
     }
 }

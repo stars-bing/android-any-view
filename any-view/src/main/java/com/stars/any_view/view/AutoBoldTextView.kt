@@ -1,4 +1,4 @@
-package com.starsxu.androidanyview.view
+package com.stars.any_view.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,7 +6,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
-import com.starsxu.androidanyview.R
+import com.stars.any_view.R
 
 /**
  * Author: Stars
