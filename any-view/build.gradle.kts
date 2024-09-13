@@ -5,6 +5,14 @@ plugins {
     id("maven-publish")
 }
 
+//publishing {
+//    publications {
+//        create<MavenPublication>("AnyView") {
+//            from(components["java"])
+//        }
+//    }
+//}
+
 android {
     namespace = "com.stars.any_view"
     compileSdk = 34
@@ -14,6 +22,10 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        aarMetadata {
+            minCompileSdk = 34
+        }
     }
 
     buildTypes {
