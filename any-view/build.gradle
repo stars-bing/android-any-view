@@ -1,17 +1,18 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.jetbrains.kotlin.kapt)
+//    id(libs.plugins.android.library)
+//    id(libs.plugins.jetbrains.kotlin.android)
+//    id(libs.plugins.jetbrains.kotlin.kapt)
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-kapt")
     id("maven-publish")
 }
 
-//publishing {
-//    publications {
-//        create<MavenPublication>("AnyView") {
-//            from(components["java"])
-//        }
-//    }
-//}
+tasks.register('generateSourcesJar', Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
 
 android {
     namespace = "com.stars.any_view"
@@ -22,15 +23,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-
-        aarMetadata {
-            minCompileSdk = 34
-        }
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            minifyEnabled false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -39,10 +36,30 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
+        freeCompilerArgs += ["-Xskip-prerelease-check"]
         jvmTarget = "1.8"
     }
     buildFeatures {
         dataBinding = true
+    }
+
+    publishing {
+        singleVariant("release")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                artifactId = "AnyView"
+                groupId = "com.stars.any_view"
+                version = "1.0.1"
+            }
+        }
+    }
+    repositories {
+
     }
 }
 
