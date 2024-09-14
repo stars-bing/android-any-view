@@ -5,17 +5,17 @@ plugins {
     id("maven-publish")
 }
 
-//publishing {
-//    publications {
-//        create<MavenPublication>("AnyView") {
-//            from(components["java"])
-//        }
-//    }
-//}
-
-val sourceJar by tasks.registering(Jar::class) {
-    from(sourceSets["main"].allSource)
-    archiveClassifier.set("sources")
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
+                groupId = "com.stars.any_view"
+                version = "1.0.3"
+                artifactId = "AnyView"
+            }
+        }
+    }
 }
 
 android {
@@ -44,25 +44,6 @@ android {
     }
     buildFeatures {
         dataBinding = true
-    }
-
-    afterEvaluate {
-        publishing {
-            publications {
-                create<MavenPublication>("mavenJava") {
-                    artifactId = "AnyView"
-                    groupId = "com.stars.any_view"
-                    version = "1.0.1"
-                    artifact(sourceJar)
-                    afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-                }
-            }
-        }
-        repositories {
-            maven {
-                url = if (version.toString().endsWith("SNAPSHOT")) uri("$rootDir/repos/releases") else uri("$rootDir/repos/snapshots")
-            }
-        }
     }
 }
 

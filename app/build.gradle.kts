@@ -12,8 +12,8 @@ android {
         applicationId = "com.starsxu.androidanyview"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
