@@ -3,13 +3,11 @@
 #### 介绍
 安卓常用的一些自定义View
 
-#### 软件架构
-软件架构说明
+#### 使用
 
-
-#### 安装教程
-
-1.  implementation("com.github.stars-bing:android-any-view:v1.0.3")
+```groovy
+implementation("com.github.stars-bing:android-any-view:v1.0.3")
+```
 
 #### 常用的自定义View
 
