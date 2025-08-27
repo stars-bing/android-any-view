@@ -6,7 +6,7 @@
 #### 使用
 
 ```groovy
-implementation("com.github.stars-bing:android-any-view:v1.0.3")
+implementation("com.github.stars-bing:android-any-view:v1.0.4")
 ```
 
 #### 常用的自定义View
@@ -26,28 +26,28 @@ implementation("com.github.stars-bing:android-any-view:v1.0.3")
 #### 使用说明
 **DashedLineView-虚线**
 ```xml
-    <!-- 虚线的颜色 -->
-    <attr name="line_color" format="color"/>
-    <!-- 虚线的宽度 -->
-    <attr name="dash_length" format="dimension"/>
-    <!-- 虚线的间距 -->
-    <attr name="gap_length" format="dimension"/>
-    <!-- 虚线的高度 -->
-    <attr name="line_size" format="dimension"/>
-    <!-- 虚线的方向 -->
-    <attr name="line_type" format="enum">
-        <enum name="horizontal" value="1" />
-        <enum name="vertical" value="2" />
-    </attr>
+<!-- 虚线的颜色 -->
+<attr name="line_color" format="color"/>
+<!-- 虚线的宽度 -->
+<attr name="dash_length" format="dimension"/>
+<!-- 虚线的间距 -->
+<attr name="gap_length" format="dimension"/>
+<!-- 虚线的高度 -->
+<attr name="line_size" format="dimension"/>
+<!-- 虚线的方向 -->
+<attr name="line_type" format="enum">
+    <enum name="horizontal" value="1" />
+    <enum name="vertical" value="2" />
+</attr>
 ```
 
 **TriangleView-三角形**
 ```xml
-    <!-- 三角形的颜色 -->
-    <attr name="bg_color" format="color"/>
-    <!-- 为正三角还是倒三角 -->
-    <attr name="triangle_type" format="enum">
-        <enum name="reversal" value="2" />
-        <enum name="square" value="1" />
-    </attr>
+<!-- 三角形的颜色 -->
+<attr name="bg_color" format="color"/>
+<!-- 为正三角还是倒三角 -->
+<attr name="triangle_type" format="enum">
+    <enum name="reversal" value="2" />
+    <enum name="square" value="1" />
+</attr>
 ```
