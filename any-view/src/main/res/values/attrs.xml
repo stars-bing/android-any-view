@@ -60,4 +60,23 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="TriangleView">
+        <attr name="bg_color" format="color"/>
+        <attr name="triangle_type" format="enum">
+            <enum name="reversal" value="2" />
+            <enum name="square" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DashedLineView">
+        <attr name="line_color" format="color"/>
+        <attr name="dash_length" format="dimension"/>
+        <attr name="gap_length" format="dimension"/>
+        <attr name="line_size" format="dimension"/>
+        <attr name="line_type" format="enum">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+        </attr>
+    </declare-styleable>
+
 </resources>

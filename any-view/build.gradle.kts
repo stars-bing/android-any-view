@@ -11,7 +11,7 @@ publishing {
             afterEvaluate {
                 from(components["release"])
                 groupId = "com.stars.any_view"
-                version = "1.0.3"
+                version = "1.0.4"
                 artifactId = "AnyView"
             }
         }
